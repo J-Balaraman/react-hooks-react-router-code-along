@@ -1,20 +1,21 @@
-import users from "../data";
-import UserCard from "../components/UserCard";
+import users from "./data";
+import UserCard from "./components/UserCard";
+import NavBar from "./NavBar";
+import React from "react";
 
 function Home() {
   
   const userList = users.map(user =>{
-    return <UserCard key={user.id} user={user}/>
+    <UserCard key={user.id} user={user}/>
   });
 
   return (
     <>
       <header>
-        {/* place NavBar here */}
+        <NavBar />
       </header>
       <main>
         <h1>Home!</h1>
-        {userList}
       </main>
     </>
   );
